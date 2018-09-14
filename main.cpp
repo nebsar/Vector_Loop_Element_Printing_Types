@@ -13,7 +13,7 @@ int printElement(int element) {
     std::cout << element << " ";
 }
 
-struct Print {
+struct PrintFunctor {
 
     int operator()(int elem) {
         std::cout << elem << " ";
@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
     std::cout << '\n';
     std::cout << "from Functor loop :  ";
 
-    for_each(v.begin(), v.end(), Print());
+    for_each(v.begin(), v.end(), PrintFunctor());
 
 
     return 0;
